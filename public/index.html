@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FSM Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+<body>
+    <header>
+      <h1>Finite State Machine Visualizer</h1>
+      <p>Input a natural language description of a finite state machine to visualize it.</p>
+      <p>Example 1: Generate a simple FSM for a light bulb that gets input from a switch</p>
+      <p>Example 2: Generate a simple FSM for a vending machine</p>
+    </header>
+    <div class="container">
+      <div class="left-pane">
+        <textarea id="fsm-prompt" placeholder="Enter FSM description..."></textarea>
+        <button id="generate-fsm">Generate FSM</button>
+        <button id="export-json">Export as JSON</button>
+        <button id="copy-data" disabled>Copy configuration (as JSON)</button>
+      </div>
+      <div class="right-pane">
+        <div id="fsm-visualization"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
